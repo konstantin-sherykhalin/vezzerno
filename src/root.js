@@ -1,5 +1,5 @@
 import React from 'react';
-import {Alert,Dimensions,StatusBar,ActivityIndicator,View} from 'react-native';
+import {Alert,Dimensions,StatusBar,ActivityIndicator,SafeAreaView} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import config from './config';
@@ -63,7 +63,7 @@ export default class Root extends React.Component {
 		let {props,state} = this;
 
 		return (
-			<View style={styles.container}>
+			<SafeAreaView style={styles.container}>
 			{state.waiting ? (
 				<ActivityIndicator size='large' />
 			) : (
@@ -72,7 +72,7 @@ export default class Root extends React.Component {
 				<Card list={state.card_list} />
 				</>
 			)}
-			</View>
+			</SafeAreaView>
 		);
 	}
 }
