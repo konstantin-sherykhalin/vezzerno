@@ -1,3 +1,5 @@
 import React from 'react';
 
-export default () => null;
+import Root from './src/root';
+
+export default Root;
